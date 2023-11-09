@@ -5,12 +5,15 @@ import {
 import { api } from "../utils/api";
 
 import "../styles/globals.css";
+import { MantineProvider } from "@mantine/core";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
 
   return (
     <ClerkProvider {...pageProps}>
+      <MantineProvider withGlobalStyles withNormalizeCSS theme={{ colorScheme: "dark" }}>
       <Component {...pageProps} />
+      </MantineProvider>
     </ClerkProvider>
   );
 };
