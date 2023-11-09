@@ -20,4 +20,8 @@ generator zod {
   provider         = "zod-prisma-types"
   output           = "./zod"
   useMultipleFiles = true
+  writeBarrelFiles = true
+  addIncludeType = true
+
 }
+
